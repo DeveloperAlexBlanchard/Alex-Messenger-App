@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alex Chatroom</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <header>
+    <h2>Welcome to the Alex Chatroom!</h2>
+  </header>
+
+  <div id="chat">
+    <!-- messages will display here -->
+    <ul id="messages"></ul>
+
+    <!-- form to send message -->
+    <form id="message-form">
+      <input id="message-input" type="text" />
+      <button id="message-btn" type="submit">Send</button>
+    </form>
+  </div>
+  <!-- scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+  <script src="index.js"></script>
+</body>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import {
+    initializeApp
+  } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyD9_0YZ-asWbj4l-PvC_DPv6QIO6Ec42AQ",
+    authDomain: "messenger-app-830cb.firebaseapp.com",
+    databaseURL: "https://messenger-app-830cb-default-rtdb.firebaseio.com",
+    projectId: "messenger-app-830cb",
+    storageBucket: "messenger-app-830cb.appspot.com",
+    messagingSenderId: "43379018483",
+    appId: "1:43379018483:web:f95ce443ea17e3fa50c586"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+
+</html>
